@@ -1,0 +1,105 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>index.html</title>
+  <meta name="description" content="index.html">
+  <style>
+    body {
+      background-color: #444;
+      color: white;
+      padding: 10px;
+      font-family: Helvetica;
+      max-width: 1200px;
+    }
+    button {
+      margin-bottom: 20px;
+      height: 25px;
+      width: 120px;
+      border-radius: 3px;
+      font-size: 13px;
+      background-color: #555;
+      color: white;
+      border: 1px solid darkgray;
+    }
+    button:hover {
+      background-color: #888;
+    }
+    img {
+      width: 1200px;
+    }
+    .about-button {
+      border-color: #888;
+      margin-bottom: 0px;
+      background-color: black;
+    }
+    .top-container {
+      display: flex;
+      flex-direction: row;
+      justify-content: space-between;
+      /* outline: 1px solid yellow; */
+      height: 60px;
+    }
+    .title {
+      font-size: 24px;
+      font-weight: bold;
+      max-width: 300px;
+    }
+    .state-container {
+      width: 650px;
+      /* outline: 1px solid gray; */
+      padding: 5px;
+      font-family: monospace;
+    }
+    .container {
+      /* margin-top: 30px; */
+      display: flex;
+      flex-direction: row;
+      height: calc(100vh - 100px);
+      justify-content: space-between;
+    }
+    .button-container {
+      width: 170px;
+      border-right: 1px solid darkgray;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+    }
+    .image-container {
+      width: 100%;
+      height: 100%;
+      outline: 1px solid #bbb;
+      overflow: scroll;
+    }
+  </style>
+</head>
+<body>
+  <script src="https://d3js.org/d3.v5.min.js"></script>
+  <script src="/js/eventhub.js"></script>
+  <script src="/js/events.js"></script>
+  <div class="top-container">
+    <div class="title">
+      An Instrumented App
+    </div>
+    <div class="state-container">
+      <div class="state-row0"></div>
+      <div class="state-row1"></div>
+    </div>
+  </div>
+  <div class="container">
+    <div class="button-container">
+      <div>
+        <button>First Button</button>
+        <button>Second Button</button>
+        <button>Another Button</button>
+      </div>
+      <div>
+        <button class="about-button">About...</button>
+      </div>
+    </div>
+    <div class="image-container">
+      <img src="/assets/Fryksta20170701IMG_7113.jpg">
+    </div>
+  </div>
+</body>
+</html>

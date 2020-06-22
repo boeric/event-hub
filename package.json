@@ -1,0 +1,25 @@
+{
+  "name": "event-hub",
+  "version": "1.0.0",
+  "description": "Demonstrates how to create a central event dispatcher in a web application",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js",
+    "start-remote": "nohup node server.js &",
+    "deploy": "rsync -rzv --exclude 'node_modules' . user-id@remote-system:/path-on-remote-system"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/boeric/event-hub.git"
+  },
+  "keywords": [],
+  "author": "Bo Ericsson <bo@boe.net> (https://boeric.github.io)",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/boeric/event-hub/issues"
+  },
+  "homepage": "https://github.com/boeric/event-hub#readme",
+  "dependencies": {
+    "ws": "^7.2.5"
+  }
+}

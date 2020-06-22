@@ -1,0 +1,124 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>analytics.html</title>
+  <meta name="description" content="analytics.html">
+  <style>
+    body {
+      background-color: #444;
+      color: white;
+      padding: 10px;
+      font-family: Helvetica;
+    }
+    button {
+      margin-bottom: 20px;
+      height: 25px;
+      width: 120px;
+      border-radius: 3px;
+      font-size: 13px;
+      background-color: #555;
+      color: white;
+      border: 1px solid darkgray;
+    }
+    button:hover {
+      background-color: #888;
+    }
+    img {
+      width: 1200px;
+    }
+    label {
+      font-size: 15px;
+      margin-right: 10px;
+      line-height: 24px;
+    }
+    input[type="range"] {
+      width: 150px;
+    }
+    pre {
+      overflow: scroll;
+      margin: 0px;
+      margin-top: 10px;
+      font-family: consolas;
+      font-size: 12px;
+    }
+    .title {
+      font-size: 24px;
+      font-weight: bold;
+    }
+    .container {
+      margin-top: 30px;
+      display: flex;
+      flex-direction: column;
+      height: calc(100vh - 90px);
+    }
+    .controls-outer-container {
+      min-width: 660px;
+      max-width: 660px;
+      height: 70px;
+    }
+    .controls-container {
+      margin-top: 10px;
+      display: flex;
+      flex-direction: row;
+      justify-content: space-between;
+    }
+    .rate-control-container {
+      max-width: 400px;
+      min-width: 400px;
+    }
+    .client-connected-container {}
+    .client-state-outer-container {
+      margin-top: 20px;
+      /* height: calc(100vh - 200px); */
+      /* overflow: scroll; */
+    }
+    .client-state-container {
+      margin-top: 20px;
+      display: flex;
+      flex-direction: row;
+      height: calc(100vh - 240px);
+      /* overflow: scroll; */
+      width: fit-content;
+    }
+    .client-state {
+      /* height: 650px; */
+      margin-right: 20px;
+      max-width: 300px;
+      min-width: 300px;
+      outline: 1px solid gray;
+      overflow: scroll;
+      padding: 10px;
+      width: 300px;
+      font-family: consolas;
+      font-size: 12px;
+    }
+  </style>
+</head>
+<body>
+  <script src="https://d3js.org/d3.v5.min.js"></script>
+  <script src="/js/analytics.js"></script>
+  <div class="title">
+    Analytics
+  </div>
+  <div class="container">
+    <div class="controls-outer-container">
+      Rate controls
+      <div class="controls-container">
+        <div class="rate-control-container">
+          <label for="rate-control"><span>Client Update Interval:</span></label>
+          <input type="range" id="rate-control" name="rate-control">
+          <label for="rate-control"><span id="rate-control-label"></span></label>
+        </div>
+        <button id="pause" class="pause">Pause</button>
+        <button id="reset" class="reset">Reset</button>
+      </div>
+    </div>
+    <div class="client-connected-container">&nbsp;</div>
+    <div class="client-state-outer-container">
+      Current Client State
+      <div class="client-state-container"></div>
+    </div>
+  </div>
+</body>
+</html>
